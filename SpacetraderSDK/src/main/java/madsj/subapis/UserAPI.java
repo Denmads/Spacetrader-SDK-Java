@@ -1,17 +1,16 @@
 package madsj.subapis;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import madsj.APICaller;
+import madsj.ApiCaller;
 import madsj.entities.Token;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
 
 public class UserAPI {
-    private APICaller caller;
+    private ApiCaller caller;
 
-    public UserAPI(APICaller caller) {
+    public UserAPI(ApiCaller caller) {
         this.caller = caller;
     }
 

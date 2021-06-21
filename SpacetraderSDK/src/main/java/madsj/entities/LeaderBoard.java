@@ -2,14 +2,14 @@ package madsj.entities;
 
 import java.util.List;
 
-public class Leaderboard {
-    private List<LeaderboardEntry> topPlayers;
+public class LeaderBoard {
+    private List<LeaderBoardEntry> topPlayers;
 
-    public Leaderboard(List<LeaderboardEntry> topPlayers) {
+    public LeaderBoard(List<LeaderBoardEntry> topPlayers) {
         this.topPlayers = topPlayers;
     }
 
-    public List<LeaderboardEntry> getTopPlayers() {
+    public List<LeaderBoardEntry> getTopPlayers() {
         return topPlayers;
     }
 

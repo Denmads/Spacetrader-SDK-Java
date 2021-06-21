@@ -6,18 +6,23 @@
  
  ## Quickstart
  ```java
- import spacetraderapi.entities.System;
- import java.util.List;
+ import madsj.entities.GameInfo;
+	import madsj.entities.System;
+	import java.util.List;
 
- public class Main {
+	public class Main {
 
-     public static void main(String[] args) throws Exception {
-         SpaceTraderAPI.setToken("1b036f31-31be-49ab-bd96-9471b13ea3f0");
-         SpaceTraderAPI.createUser("MyNewUser");
+	    public static void main(String[] args) throws Exception {
+	        //Existing User
+	        SpaceTrader st = new SpaceTrader.Builder().token("1b036f31-31be-49ab-bd96-9471b13ea3f0").build();
+	        //New User
+	        SpaceTrader st2 = new SpaceTrader.Builder().username("MyNewUser").build();
 
-         List<System> systems = SpaceTraderAPI.Systems().getListOfSystems();
+	        List<System> systems = st.Systems.getListOfSystems();
+	        java.lang.System.out.println(systems);
 
-         java.lang.System.out.println(systems);
-     }
- }
+	        GameInfo info = st.getGameInfo();
+	        java.lang.System.out.println(info.getStatus());
+	    }
+	}
  ```

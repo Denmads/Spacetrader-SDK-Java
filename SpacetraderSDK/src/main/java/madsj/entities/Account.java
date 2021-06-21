@@ -3,14 +3,14 @@ package madsj.entities;
 import java.time.LocalDateTime;
 import java.util.Date;
 
-public class User {
+public class Account {
     private String username;
     private int credits;
     private int shipCount;
     private int structureCount;
     private LocalDateTime joinedAt;
 
-    public User(String username, int credits, int shipCount, int structureCount, LocalDateTime joinedAt) {
+    public Account(String username, int credits, int shipCount, int structureCount, LocalDateTime joinedAt) {
         this.username = username;
         this.credits = credits;
         this.shipCount = shipCount;

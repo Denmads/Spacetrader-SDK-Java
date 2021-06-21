@@ -2,7 +2,7 @@ package madsj.subapis;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import madsj.APICaller;
+import madsj.ApiCaller;
 import madsj.deserializers.SystemDeserializer;
 import madsj.entities.System;
 
@@ -12,9 +12,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SystemAPI {
-    private APICaller caller;
+    private ApiCaller caller;
 
-    public SystemAPI(APICaller caller) {
+    public SystemAPI(ApiCaller caller) {
         this.caller = caller;
     }
 

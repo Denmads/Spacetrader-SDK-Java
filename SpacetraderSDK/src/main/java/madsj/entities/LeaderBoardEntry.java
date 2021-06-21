@@ -1,11 +1,11 @@
 package madsj.entities;
 
-public class LeaderboardEntry {
+public class LeaderBoardEntry {
     private String username;
     private int rank;
     private int netWorth;
 
-    public LeaderboardEntry(String username, int rank, int netWorth) {
+    public LeaderBoardEntry(String username, int rank, int netWorth) {
         this.username = username;
         this.rank = rank;
         this.netWorth = netWorth;

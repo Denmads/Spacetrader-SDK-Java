@@ -2,19 +2,18 @@ package madsj.subapis;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import madsj.APICaller;
+import madsj.ApiCaller;
 import madsj.deserializers.GameInfoDeserializer;
-import madsj.deserializers.LeaderboardDeserializer;
 import madsj.entities.GameInfo;
-import madsj.entities.Leaderboard;
+import madsj.entities.Token;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
 
 public class GameAPI {
-    private APICaller caller;
+    private ApiCaller caller;
 
-    public GameAPI(APICaller caller) {
+    public GameAPI(ApiCaller caller) {
         this.caller = caller;
     }
 
@@ -34,23 +33,5 @@ public class GameAPI {
         Gson gson = builder.create();
 
         return gson.fromJson(json, GameInfo.class);
-    }
-
-    /**
-     * Get the top ten players with the most net worth
-     * @return
-     * @throws InterruptedException
-     * @throws IOException
-     * @throws URISyntaxException
-     */
-    public Leaderboard getLeaderboard() throws InterruptedException, IOException, URISyntaxException {
-        String json = caller.GET("game/leaderboard/net-worth");
-
-        GsonBuilder builder = new GsonBuilder();
-        builder.registerTypeAdapter(Leaderboard.class, new LeaderboardDeserializer());
-
-        Gson gson = builder.create();
-
-        return gson.fromJson(json, Leaderboard.class);
     }
 }

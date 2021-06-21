@@ -1,23 +1,22 @@
 package madsj;
 
 import java.io.IOException;
-import java.net.Authenticator;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class APICaller {
+public class ApiCaller {
 
     private String baseURL = "https://api.spacetraders.io/";
     private String token;
 
-    public APICaller() {
+    public ApiCaller() {
         this("");
     }
 
-    public APICaller(String token) {
+    public ApiCaller(String token) {
         this.token = token;
     }
 
